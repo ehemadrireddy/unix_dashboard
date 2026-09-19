@@ -1,0 +1,8 @@
+[
+  {
+    "username": "admin",
+    "hashed_password": "$2b$12$...", 
+    "role": "E",
+    "disabled": false
+  }
+]

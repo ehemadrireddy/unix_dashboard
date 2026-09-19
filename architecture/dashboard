@@ -1,0 +1,13 @@
+react-dashboard-source/
+├── package.json
+├── vite.config.js
+├── index.html
+├── public/
+│   └── config.json
+└── src/
+    ├── components/
+    │   ├── CustomHeader.jsx
+    │   └── Dashboard.jsx
+    ├── api.js
+    ├── App.jsx
+    └── main.jsx

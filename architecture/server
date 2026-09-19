@@ -1,0 +1,16 @@
+/opt/dashboard-hub/
+│
+├── .env
+├── requirements.txt
+├── dashboard_server.py
+├── dashboard.service             # Place in /etc/systemd/system/ on actual server
+│
+├── data/                         # Auto-created on first run
+│   ├── users.json
+│   ├── schema.json
+│   └── server_data.json
+│
+└── dist/                         # 🌟 Renamed from 'frontend' to 'dist'
+    ├── index.html
+    ├── config.json               # 🌟 Public API URL only (No secrets)
+    └── assets/                   # Compiled JS & CSS

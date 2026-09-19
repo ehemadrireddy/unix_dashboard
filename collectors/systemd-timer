@@ -1,0 +1,48 @@
+[Unit]
+Description=Run Collector every 5 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+Unit=collector.service
+
+[Install]
+WantedBy=timers.target
+
+-------
+
+
+
+
+[Unit]
+Description=Infrastructure Data Collector
+After=network.target
+
+[Service]
+Type=oneshot
+User=dash-fetcher
+WorkingDirectory=/opt/collector
+EnvironmentFile=/opt/collector/collector.env
+ExecStart=/opt/collector/venv/bin/python /opt/collector/collector.py
+
+
+
+
+
+---------------------------------------------
+
+
+[Unit]
+Description=FastAPI Dashboard Hub
+After=network.target
+
+[Service]
+User=dash-user
+WorkingDirectory=/opt/dashboard-hub
+ExecStart=/opt/dashboard-hub/venv/bin/uvicorn dashboard_server:app --host 0.0.0.0 --port 8443 --ssl-keyfile /path/to/key.pem --ssl-certfile /path/to/cert.pem
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+

@@ -1,0 +1,5 @@
+[
+  { "host": "10.12.23.40", "username": "dash_fetcher" },
+  { "host": "10.12.23.78", "username": "root", "port": 2222 },
+  { "host": "swndbadb02.prod.local", "username": "dash_fetcher" }
+]

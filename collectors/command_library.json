@@ -1,0 +1,14 @@
+{
+  "cpu_cores": {
+    "RHEL": "lscpu | grep '^CPU(s):' | awk '{print $2}'",
+    "AIX": "prtconf | grep 'Number Of Processors' | awk '{print $4}'"
+  },
+  "memory_gb": {
+    "RHEL": "free -g | grep Mem | awk '{print $2}'",
+    "AIX": "svmon -G | grep memory | awk '{print $2}'"
+  },
+  "os_version": {
+    "RHEL": "cat /etc/redhat-release",
+    "AIX": "oslevel -s"
+  }
+}

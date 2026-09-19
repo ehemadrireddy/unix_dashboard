@@ -1,0 +1,6 @@
+[
+  {"field": "hostname", "header": "Hostname", "type": "auto", "editable": false},
+  {"field": "os_type", "header": "OS", "type": "auto", "editable": false},
+  {"field": "cpu_cores", "header": "CPU Cores", "type": "auto", "editable": false},
+  {"field": "environment", "header": "Environment", "type": "manual", "editable": true}
+]
