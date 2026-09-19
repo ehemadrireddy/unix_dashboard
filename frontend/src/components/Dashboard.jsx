@@ -2,8 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
-import { api } from '../api';
-import CustomHeader from './CustomHeader';
+import { api } from '../api.js';
+import CustomHeader from './CustomHeader.jsx';
 
 const Dashboard = () => {
   const [rowData, setRowData] = useState([]);
